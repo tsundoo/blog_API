@@ -37,6 +37,7 @@ const auth = async (req, res, next) => {
             return res.status(401).json({ message: 'Token expired' });
         }
         res.status(500).json({ message: 'Internal server error' });
+        console.log('Authentication error:', error.message);
     }
 };
 
